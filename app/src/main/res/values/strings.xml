@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hangman</string>
+    <string name="rules">See rules</string>
+    <string name="start">New game</string>
+    <string name="lang">Change language</string>
+    <string name="stats">Statistics</string>
+</resources>
