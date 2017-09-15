@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ord">
+        <item>HØYSKOLEN</item>
+        <item>TELEFON</item>
+        <item>DATAMASKIN</item>
+        <item>TASTATUR</item>
+        <item>HEKSEGRYTE</item>
+        <item>APPELSIN</item>
+        <item>BRYTEJERN</item>
+        <item>KATTUNGE</item>
+        <item>BANREVAKT</item>
+        <item>SVØMMEBASENG</item>
+    </string-array>
+</resources>
