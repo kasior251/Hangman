@@ -28,11 +28,20 @@
         android:layout_height="0dp"
         android:layout_weight="1.5"
         android:id="@+id/ord"
-        android:text="ordtilågjette"
         android:textAllCaps="true"
         android:gravity="center"
-        android:textSize="20sp"
+        android:textSize="40sp"
         android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:id="@+id/melding"
+        android:textColor="@color/red"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,7 +50,15 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:padding="1dp"
-        android:weightSum="10">
+        android:weightSum="11">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/q"
+            android:text="@string/q"
+            android:onClick="valgtBokstav" />
 
         <Button
         android:layout_width="0dp"
@@ -131,7 +148,7 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:padding="1dp"
-        android:weightSum="10">
+        android:weightSum="11">
 
         <Button
             android:layout_width="0dp"
@@ -213,6 +230,14 @@
             android:text="@string/ø"
             android:onClick="valgtBokstav"/>
 
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/æ"
+            android:text="@string/æ"
+            android:onClick="valgtBokstav"/>
+
 
     </LinearLayout>
 
@@ -223,7 +248,7 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:padding="1dp"
-        android:weightSum="7">
+        android:weightSum="11">
 
         <Button
             android:layout_width="0dp"
@@ -232,6 +257,13 @@
             android:id="@+id/z"
             android:text="@string/z"
             android:onClick="valgtBokstav"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/x"
+            android:text="@string/x"
+            android:onClick="valgtBokstav" />
 
         <Button
             android:layout_width="0dp"
@@ -273,13 +305,6 @@
             android:text="@string/m"
             android:onClick="valgtBokstav"/>
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/æ"
-            android:text="@string/æ"
-            android:onClick="valgtBokstav"/>
     </LinearLayout>
 
 </LinearLayout>

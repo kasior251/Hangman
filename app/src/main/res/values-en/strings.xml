@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Hangman</string>
-    <string name="rules">Se regler</string>
-    <string name="start">Nytt spill</string>
-    <string name="lang">Endre språk</string>
-    <string name="stats">Statistikk</string>
-    <string name="newGame">Nytt spill</string>
-    <string name="exit">Avslutt</string>
-    <string name="WinnerMsg">Du vant!</string>
-    <string name="LoserMsg">Du tapte!</string>
+    <string name="rules">See the rules</string>
+    <string name="start">New game</string>
+    <string name="lang">Change language</string>
+    <string name="stats">Statistics</string>
+    <string name="newGame">New game</string>
+    <string name="exit">Quit</string>
+    <string name="WinnerMsg">You won!</string>
+    <string name="LoserMsg">You lost!</string>
 
     <string name="a">A</string>
     <string name="b">B</string>

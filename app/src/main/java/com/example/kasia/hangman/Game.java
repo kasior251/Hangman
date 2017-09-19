@@ -1,5 +1,7 @@
 package com.example.kasia.hangman;
 
+import android.content.Intent;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,12 +18,13 @@ implementere sjekk om det er oppnådd maks antall feil - da bør det vises ordet
 implementere sjekk om alle bokstaver er gjettet
 
  */
-public class Game extends AppCompatActivity {
+public class Game extends AppCompatActivity implements GameOverDialog.DialogClickListener {
 
     private int ordLengde;
     private char[][] ordTabell;
-    int antFeil;
-    int antRiktig;
+    private int antFeil;
+    private int antRiktig;
+    private String ord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,16 @@ public class Game extends AppCompatActivity {
         ordLengde = ordTabell.length;
         antFeil = antRiktig = 0;
         skrivTilSkjerm(getOrd());
+    }
+
+    //sjekker om spilleren har flere forsøk
+    protected boolean flereForsok()
+    {
+        return (antFeil < 7);
+    }
+
+    protected boolean ordGjettet() {
+        return (antRiktig == ordLengde);
     }
 
     //oppdaterer bildet av galge
@@ -68,17 +81,17 @@ public class Game extends AppCompatActivity {
 
     //velger et ramdomt ord fra arrays.xml
     private char[][] genererOrd() {
-        String randomOrd = (getResources().getStringArray(R.array.ord)[(new Random()).nextInt(9)]);
+        ord = (getResources().getStringArray(R.array.ord)[(new Random()).nextInt(9)]);
         TextView visOrd = (TextView)findViewById(R.id.ord);
-        visOrd.setText(randomOrd);
-        char[][] ord = new char[randomOrd.length()][2];
-        for (int i = 0; i < randomOrd.length(); i++)
+        visOrd.setText(ord);
+        char[][] ordTabell = new char[ord.length()][2];
+        for (int i = 0; i < ord.length(); i++)
         {
-            ord[i][0] = randomOrd.charAt(i);
-            ord[i][1] = 'n';
+            ordTabell[i][0] = ord.charAt(i);
+            ordTabell[i][1] = 'n';
         }
 
-        return ord;
+        return ordTabell;
     }
 
     //returnerer ordet som skal skrives til skjermen
@@ -109,6 +122,8 @@ public class Game extends AppCompatActivity {
 
         switch (bokstavId) {
 
+            case R.id.q: sjekkBokstav("q");
+                break;
             case R.id.w: sjekkBokstav("w");
                 break;
             case R.id.e: sjekkBokstav("e");
@@ -151,6 +166,8 @@ public class Game extends AppCompatActivity {
                 break;
             case R.id.z: sjekkBokstav("z");
                 break;
+            case R.id.x: sjekkBokstav("x");
+                break;
             case R.id.c: sjekkBokstav("c");
                 break;
             case R.id.v: sjekkBokstav("v");
@@ -170,6 +187,10 @@ public class Game extends AppCompatActivity {
     //sjekker om bokstaven finnes i ordet
     //oppdaterer variabler og ordet samt bildet som vises på skjermen
     private void sjekkBokstav(String c) {
+        if (!flereForsok() || ordGjettet()  ) {
+            return;
+        }
+
         int knappId = getResources().getIdentifier(c, "id", "com.example.kasia.hangman");
         ((Button)findViewById(knappId)).setEnabled(false);
         char bokstav = Character.toUpperCase(c.charAt(0));
@@ -188,7 +209,35 @@ public class Game extends AppCompatActivity {
         }
         if (!funnet)
             antFeil++;
+
         skrivTilSkjerm(getOrd());
+
+        if (ordGjettet()) {
+            ((TextView)findViewById(R.id.melding)).setText(R.string.WinnerMsg);
+            showDialog(getString(R.string.WinnerMsg));
+        }
+        if (!flereForsok()) {
+            skrivTilSkjerm(ord);
+            ((TextView)findViewById(R.id.melding)).setText(R.string.LoserMsg);
+            showDialog(getString(R.string.LoserMsg));
+        }
+    }
+
+    @Override
+    public void newGame() {
+        finish();
+        Intent intent = new Intent(this, Game.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void exit() {
+        finish();
+    }
+
+    public void showDialog(String string) {
+        DialogFragment dialogFragment = GameOverDialog.newInstance(string);
+        dialogFragment.show(getSupportFragmentManager(), "");
     }
 
 

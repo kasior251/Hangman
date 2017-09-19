@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ord">
+        <item>EXPLANATION</item>
+        <item>SMARTPHONE</item>
+        <item>INDEPENDENT</item>
+        <item>MEMORY</item>
+        <item>ESSENTIAL</item>
+        <item>SATELLITE</item>
+        <item>BREEZE</item>
+        <item>EXCHANGE</item>
+        <item>ARRANGEMENT</item>
+        <item>TWENTY</item>
+    </string-array>
+</resources>
