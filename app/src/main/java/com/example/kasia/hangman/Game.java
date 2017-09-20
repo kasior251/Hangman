@@ -4,20 +4,20 @@ import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
+import static com.example.kasia.hangman.R.id.my_toolbar;
 
-/*
-TODO
-implementere sjekk om det er oppnådd maks antall feil - da bør det vises ordet og spillet stopper
-implementere sjekk om alle bokstaver er gjettet
-
- */
 public class Game extends AppCompatActivity implements GameOverDialog.DialogClickListener {
 
     private int ordLengde;
@@ -30,6 +30,8 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        Toolbar myToolbar = (Toolbar)findViewById(my_toolbar);
+        setSupportActionBar(myToolbar);
         ordTabell = genererOrd();
         ordLengde = ordTabell.length;
         antFeil = antRiktig = 0;
@@ -213,13 +215,13 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
         skrivTilSkjerm(getOrd());
 
         if (ordGjettet()) {
-            ((TextView)findViewById(R.id.melding)).setText(R.string.WinnerMsg);
-            showDialog(getString(R.string.WinnerMsg));
+            ((TextView)findViewById(R.id.melding)).setText(R.string.winnerMsg);
+            showDialog(getString(R.string.winnerMsg) + " " + getString(R.string.theWord) + " " + ord);
         }
         if (!flereForsok()) {
             skrivTilSkjerm(ord);
-            ((TextView)findViewById(R.id.melding)).setText(R.string.LoserMsg);
-            showDialog(getString(R.string.LoserMsg));
+            ((TextView)findViewById(R.id.melding)).setText(R.string.loserMsg);
+            showDialog(getString(R.string.loserMsg) + " " + getString(R.string.theWord) + " " + ord);
         }
     }
 
@@ -240,6 +242,30 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
         dialogFragment.show(getSupportFragmentManager(), "");
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.hei:
+                Toast.makeText(this, "Hei!", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.hopp:
+                Toast.makeText(this, "Hopp!", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+// If we got here, the user's action was not recognized.
+// Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
+    }
 
 }
 

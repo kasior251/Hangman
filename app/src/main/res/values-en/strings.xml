@@ -6,8 +6,11 @@
     <string name="stats">Statistics</string>
     <string name="newGame">New game</string>
     <string name="exit">Quit</string>
-    <string name="WinnerMsg">You won!</string>
-    <string name="LoserMsg">You lost!</string>
+    <string name="winnerMsg">You won!</string>
+    <string name="loserMsg">You lost!</string>
+    <string name="theWord">The correct word is </string>
+    <string name="message">Do you want to play again?</string>
+
 
     <string name="a">A</string>
     <string name="b">B</string>

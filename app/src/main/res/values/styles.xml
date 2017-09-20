@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Veldig små knapper til bokstaver  -->
+    <style name="bokstavKnapp" parent="android:Widget.Button.Small">
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
 </resources>

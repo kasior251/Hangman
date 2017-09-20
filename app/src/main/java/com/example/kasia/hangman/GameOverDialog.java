@@ -42,7 +42,7 @@ public class GameOverDialog extends DialogFragment {
 
         String tittel = getArguments().getString("Tittel");
         return new AlertDialog.Builder(getActivity())
-                .setTitle(tittel).setMessage("Message").setPositiveButton(R.string.newGame,
+                .setTitle(tittel).setMessage(R.string.message).setPositiveButton(R.string.newGame,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton)
                             {

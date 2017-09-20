@@ -6,8 +6,11 @@
     <string name="stats">Statistikk</string>
     <string name="newGame">Nytt spill</string>
     <string name="exit">Avslutt</string>
-    <string name="WinnerMsg">Du vant!</string>
-    <string name="LoserMsg">Du tapte!</string>
+    <string name="winnerMsg">Du vant!</string>
+    <string name="loserMsg">Du tapte!</string>
+    <string name="theWord">Det riktige ordet var</string>
+    <string name="message">Vil du spille igjen?</string>
+
 
     <string name="a">A</string>
     <string name="b">B</string>

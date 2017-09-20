@@ -8,13 +8,23 @@
     tools:context="com.example.kasia.hangman.Game"
     android:background="@color/white">
 
-    <TextView
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/start"
-        android:textSize="25sp"
-        android:layout_margin="10dp"
-        android:gravity="center" />
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:id="@+id/melding"
+        android:textColor="@color/red"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
 
     <ImageView
         android:id="@+id/galge"
@@ -33,16 +43,6 @@
         android:textSize="40sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:id="@+id/melding"
-        android:textColor="@color/red"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -58,7 +58,8 @@
             android:layout_weight="1"
             android:id="@+id/q"
             android:text="@string/q"
-            android:onClick="valgtBokstav" />
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
         android:layout_width="0dp"
@@ -66,7 +67,8 @@
         android:layout_weight="1"
         android:id="@+id/w"
         android:text="@string/w"
-        android:onClick="valgtBokstav" />
+        android:onClick="valgtBokstav"
+        style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -74,7 +76,8 @@
             android:layout_weight="1"
             android:id="@+id/e"
             android:text="@string/e"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -82,7 +85,8 @@
             android:layout_weight="1"
             android:id="@+id/r"
             android:text="@string/r"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -90,7 +94,8 @@
             android:layout_weight="1"
             android:id="@+id/t"
             android:text="@string/t"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -98,7 +103,8 @@
             android:layout_weight="1"
             android:id="@+id/y"
             android:text="@string/y"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -106,7 +112,8 @@
             android:layout_weight="1"
             android:id="@+id/u"
             android:text="@string/u"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -114,7 +121,8 @@
             android:layout_weight="1"
             android:id="@+id/i"
             android:text="@string/i"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -122,7 +130,8 @@
             android:layout_weight="1"
             android:id="@+id/o"
             android:text="@string/o"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -130,7 +139,8 @@
             android:layout_weight="1"
             android:id="@+id/p"
             android:text="@string/p"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -138,7 +148,8 @@
             android:layout_weight="1"
             android:id="@+id/å"
             android:text="@string/å"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -156,7 +167,8 @@
             android:layout_weight="1"
             android:id="@+id/a"
             android:text="@string/a"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -164,7 +176,8 @@
             android:layout_weight="1"
             android:id="@+id/s"
             android:text="@string/s"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -172,7 +185,8 @@
             android:layout_weight="1"
             android:id="@+id/d"
             android:text="@string/d"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -180,7 +194,8 @@
             android:layout_weight="1"
             android:id="@+id/f"
             android:text="@string/f"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -188,7 +203,8 @@
             android:layout_weight="1"
             android:id="@+id/g"
             android:text="@string/g"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -196,7 +212,8 @@
             android:layout_weight="1"
             android:id="@+id/h"
             android:text="@string/h"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -204,7 +221,8 @@
             android:layout_weight="1"
             android:id="@+id/j"
             android:text="@string/j"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -212,7 +230,8 @@
             android:layout_weight="1"
             android:id="@+id/k"
             android:text="@string/k"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -220,7 +239,8 @@
             android:layout_weight="1"
             android:id="@+id/l"
             android:text="@string/l"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -228,7 +248,8 @@
             android:layout_weight="1"
             android:id="@+id/ø"
             android:text="@string/ø"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -236,7 +257,8 @@
             android:layout_weight="1"
             android:id="@+id/æ"
             android:text="@string/æ"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
 
     </LinearLayout>
@@ -256,14 +278,16 @@
             android:layout_weight="1"
             android:id="@+id/z"
             android:text="@string/z"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/x"
             android:text="@string/x"
-            android:onClick="valgtBokstav" />
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -271,7 +295,8 @@
             android:layout_weight="1"
             android:id="@+id/c"
             android:text="@string/c"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -279,7 +304,8 @@
             android:layout_weight="1"
             android:id="@+id/v"
             android:text="@string/v"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -287,7 +313,8 @@
             android:layout_weight="1"
             android:id="@+id/b"
             android:text="@string/b"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -295,7 +322,8 @@
             android:layout_weight="1"
             android:id="@+id/n"
             android:text="@string/n"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"
@@ -303,7 +331,8 @@
             android:layout_weight="1"
             android:id="@+id/m"
             android:text="@string/m"
-            android:onClick="valgtBokstav"/>
+            android:onClick="valgtBokstav"
+            style="@style/bokstavKnapp"/>
 
     </LinearLayout>
 
