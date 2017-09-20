@@ -53,25 +53,25 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
         ImageView image = (ImageView)findViewById(R.id.galge);
         switch (feil) {
             case 0:
-                image.setImageResource(R.drawable.d001);
+                image.setImageResource(R.drawable.galge0);
                 break;
             case 1:
-                image.setImageResource(R.drawable.d002);
+                image.setImageResource(R.drawable.galge1);
                 break;
             case 2:
-                image.setImageResource(R.drawable.d003);
+                image.setImageResource(R.drawable.galge2);
                 break;
             case 3:
-                image.setImageResource(R.drawable.d004);
+                image.setImageResource(R.drawable.galge3);
                 break;
             case 4:
-                image.setImageResource(R.drawable.d005);
+                image.setImageResource(R.drawable.galge4);
                 break;
             case 5:
-                image.setImageResource(R.drawable.d006);
+                image.setImageResource(R.drawable.galge5);
                 break;
             case 6:
-                image.setImageResource(R.drawable.d007);
+                image.setImageResource(R.drawable.galge6);
                 break;
             case 7:
                 image.setImageResource(R.drawable.d008);
