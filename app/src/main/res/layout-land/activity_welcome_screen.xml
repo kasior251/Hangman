@@ -5,23 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.kasia.hangman.WelcomeScreen"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:src="@drawable/logo"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:orientation="vertical">
 
         <Button
             android:layout_width="300dp"
             android:layout_height="55dp"
-            android:layout_gravity="center"
             android:onClick="langOnClick"
             android:text="@string/lang"
             android:background="@drawable/button"
@@ -30,7 +29,6 @@
         <Button
             android:layout_width="300dp"
             android:layout_height="55dp"
-            android:layout_gravity="center"
             android:onClick="rulesOnClick"
             android:text="@string/rules"
             android:background="@drawable/button"
@@ -40,7 +38,6 @@
             android:id="@+id/newGame"
             android:layout_width="300dp"
             android:layout_height="55dp"
-            android:layout_gravity="center"
             android:onClick="startOnClick"
             android:text="@string/start"
             android:background="@drawable/button"
@@ -49,7 +46,6 @@
         <Button
             android:layout_width="300dp"
             android:layout_height="55dp"
-            android:layout_gravity="center"
             android:onClick="statsOnClick"
             android:text="@string/stats"
             android:background="@drawable/button"

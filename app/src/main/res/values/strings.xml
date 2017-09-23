@@ -10,6 +10,11 @@
     <string name="loserMsg">Du tapte!</string>
     <string name="theWord">Det riktige ordet var</string>
     <string name="message">Vil du spille igjen?</string>
+    <string name="victories">Seier(e)</string>
+    <string name="losses">Tap</string>
+    <string name="statsTittel">Statistikk for denne økten</string>
+    <string name="stop">Avslutt</string>
+    <string name="back">Tilbake</string>
 
 
     <string name="a">A</string>

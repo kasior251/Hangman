@@ -1,6 +1,7 @@
 package com.example.kasia.hangman;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,8 +13,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.util.Random;
 
 import static com.example.kasia.hangman.R.id.my_toolbar;
@@ -44,6 +43,7 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
         return (antFeil < 7);
     }
 
+    //sjekker om ordet er alt gjettet
     protected boolean ordGjettet() {
         return (antRiktig == ordLengde);
     }
@@ -74,16 +74,16 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
                 image.setImageResource(R.drawable.galge6);
                 break;
             case 7:
-                image.setImageResource(R.drawable.d008);
+                image.setImageResource(R.drawable.galge7);
                 break;
             default:
-                image.setImageResource(R.drawable.d001);
+                image.setImageResource(R.drawable.galge0);
         }
     }
 
-    //velger et ramdomt ord fra arrays.xml
+    //velger et randomt ord fra arrays.xml
     private char[][] genererOrd() {
-        ord = (getResources().getStringArray(R.array.ord)[(new Random()).nextInt(9)]);
+        ord = (getResources().getStringArray(R.array.ord)[(new Random()).nextInt(getResources().getStringArray(R.array.ord).length)]);
         TextView visOrd = (TextView)findViewById(R.id.ord);
         visOrd.setText(ord);
         char[][] ordTabell = new char[ord.length()][2];
@@ -215,16 +215,23 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
         skrivTilSkjerm(getOrd());
 
         if (ordGjettet()) {
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.cheering);
+            mp.start();
             ((TextView)findViewById(R.id.melding)).setText(R.string.winnerMsg);
             showDialog(getString(R.string.winnerMsg) + " " + getString(R.string.theWord) + " " + ord);
+            WelcomeScreen.seier();
         }
         if (!flereForsok()) {
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.womp);
+            mp.start();
             skrivTilSkjerm(ord);
             ((TextView)findViewById(R.id.melding)).setText(R.string.loserMsg);
             showDialog(getString(R.string.loserMsg) + " " + getString(R.string.theWord) + " " + ord);
+            WelcomeScreen.tap();
         }
     }
 
+    //Metoden som blir kalt på hvis spilleren øsnker å spille en gang til
     @Override
     public void newGame() {
         finish();
@@ -232,11 +239,13 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
         startActivity(intent);
     }
 
+    //Metoden som kalles på når spilleren ikke vil starte et nytt spill
     @Override
     public void exit() {
         finish();
     }
 
+    //Dialog-fragment som vises når spilleren gjettet ordet eller tapte
     public void showDialog(String string) {
         DialogFragment dialogFragment = GameOverDialog.newInstance(string);
         dialogFragment.show(getSupportFragmentManager(), "");
@@ -253,11 +262,8 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.hei:
-                Toast.makeText(this, "Hei!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.hopp:
-                Toast.makeText(this, "Hopp!", Toast.LENGTH_SHORT).show();
+            case R.id.stop:
+                finish();
                 break;
             default:
 // If we got here, the user's action was not recognized.

@@ -10,7 +10,11 @@
     <string name="loserMsg">You lost!</string>
     <string name="theWord">The correct word is </string>
     <string name="message">Do you want to play again?</string>
-
+    <string name="victories">Wins</string>
+    <string name="losses">Losses</string>
+    <string name="statsTittel">Stats for this session</string>
+    <string name="stop">Quit</string>
+    <string name="back">Go back</string>
 
     <string name="a">A</string>
     <string name="b">B</string>
