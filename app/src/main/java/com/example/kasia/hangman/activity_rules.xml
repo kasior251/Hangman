@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.kasia.hangman.Game"
+    android:background="@color/white"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/rulesHeader"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textColorHighlight="@android:color/primary_text_dark" />
+
+    <TextView
+        android:id="@+id/rulesContent"
+        android:layout_width="317dp"
+        android:layout_height="385dp"
+        android:padding="20dp"
+        android:gravity="left"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@android:color/primary_text_dark"
+        android:textSize="16sp"
+        android:layout_weight="6.31" />
+
+
+</LinearLayout>
+
