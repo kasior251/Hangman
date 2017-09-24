@@ -55,6 +55,15 @@
             android:background="@drawable/button"
             style="@style/welcomeScreenButton"/>
 
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:onClick="quitOnClick"
+            android:text="@string/stop"
+            android:background="@drawable/button"
+            style="@style/welcomeScreenButton"/>
+
     </LinearLayout>
 
 </LinearLayout>

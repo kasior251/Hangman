@@ -13,7 +13,7 @@
         android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:titleTextColor="@color/green"
+        app:titleTextColor="@color/green2"
         android:background="@color/green">
     </android.support.v7.widget.Toolbar>
 
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        app:srcCompat="@drawable/d001" />
+        app:srcCompat="@drawable/galge0" />
 
     <TextView
         android:layout_width="match_parent"
@@ -64,14 +64,14 @@
             style="@style/bokstavKnapp"/>
 
         <Button
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:id="@+id/w"
-        android:text="@string/w"
-        android:onClick="valgtBokstav"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/w"
+            android:text="@string/w"
+            android:onClick="valgtBokstav"
             android:background="@drawable/letter_button"
-        style="@style/bokstavKnapp"/>
+            style="@style/bokstavKnapp"/>
 
         <Button
             android:layout_width="0dp"

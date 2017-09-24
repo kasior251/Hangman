@@ -6,23 +6,38 @@ import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static com.example.kasia.hangman.R.id.my_toolbar;
 
 public class Game extends AppCompatActivity implements GameOverDialog.DialogClickListener {
 
+    //lengde av det aktuelle ordet
     private int ordLengde;
+
+    //ordet lagt i en tabell
     private char[][] ordTabell;
+
+    //antal feil gjort så langt
     private int antFeil;
+
+    //antal bokstaver gjettet så langt
     private int antRiktig;
+
+    //ordet
     private String ord;
 
     @Override
@@ -190,7 +205,7 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
     //oppdaterer variabler og ordet samt bildet som vises på skjermen
     private void sjekkBokstav(String c) {
         if (!flereForsok() || ordGjettet()  ) {
-
+            Toast.makeText(this, R.string.gameOver, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -250,6 +265,7 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
     public void showDialog(String string) {
         DialogFragment dialogFragment = GameOverDialog.newInstance(string);
         dialogFragment.show(getSupportFragmentManager(), "");
+
     }
 
 

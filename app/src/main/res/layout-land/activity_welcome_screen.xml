@@ -15,7 +15,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical">
 
         <Button
@@ -48,6 +48,14 @@
             android:layout_height="55dp"
             android:onClick="statsOnClick"
             android:text="@string/stats"
+            android:background="@drawable/button"
+            style="@style/welcomeScreenButton"/>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:onClick="quitOnClick"
+            android:text="@string/stop"
             android:background="@drawable/button"
             style="@style/welcomeScreenButton"/>
 

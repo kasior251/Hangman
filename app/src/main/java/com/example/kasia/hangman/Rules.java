@@ -15,6 +15,7 @@ public class Rules extends AppCompatActivity {
             setContentView(R.layout.activity_rules);
         }
 
+        //lukk viewet
         protected void stop(View v) {
             finish();
         }

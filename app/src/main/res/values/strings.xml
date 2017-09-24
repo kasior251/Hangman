@@ -2,7 +2,7 @@
     <string name="app_name">Hangman</string>
     <string name="rules">Se regler</string>
     <string name="start">Nytt spill</string>
-    <string name="lang">Endre språk</string>
+    <string name="lang">English</string>
     <string name="stats">Statistikk</string>
     <string name="newGame">Nytt spill</string>
     <string name="exit">Avslutt</string>
@@ -16,6 +16,7 @@
     <string name="stop">Avslutt</string>
     <string name="back">Tilbake</string>
     <string name="help">Hjelp</string>
+    <string name="gameOver">Game Over</string>
 
     <string name="rulesHeader">Regler</string>
     <string name="rules1">Hangman er en gjettelek der du skal gjette et ord</string>

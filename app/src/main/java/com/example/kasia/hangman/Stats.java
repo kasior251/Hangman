@@ -16,18 +16,11 @@ public class Stats extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_stats);
-
-
-
-
         ((TextView)findViewById(R.id.victories)).setText(Integer.toString(getIntent().getIntExtra("seier", 0)));
         ((TextView)findViewById(R.id.losses)).setText(Integer.toString(getIntent().getIntExtra("tap", 0)));
-
-
-
-
     }
 
+    //lukk viewet
     public void stop(View view) {
         finish();
     }

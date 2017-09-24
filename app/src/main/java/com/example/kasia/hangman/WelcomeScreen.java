@@ -112,4 +112,8 @@ public class WelcomeScreen extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void quitOnClick(View v) {
+        finish();
+    }
+
 }

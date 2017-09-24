@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.kasia.hangman.Game"
-    android:background="@color/white"
+    android:background="@color/green1"
     android:weightSum="10">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="50sp"
-        android:textColor="@color/green10"
+        android:textColor="@android:color/black"
         android:textColorHighlight="@android:color/primary_text_dark"
         android:layout_weight="3"/>
 
@@ -28,7 +28,7 @@
             android:text="@string/rules1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/green1"
+            android:background="@color/green7"
             style="@style/rulesText" />
 
         <TextView
@@ -42,28 +42,28 @@
             android:text="@string/rules3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/green3"
+            android:background="@color/green7"
             style="@style/rulesText" />
 
         <TextView
             android:text="@string/rules4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/green4"
+            android:background="@color/green2"
             style="@style/rulesText" />
 
         <TextView
             android:text="@string/rules5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/green5"
+            android:background="@color/green7"
             style="@style/rulesText" />
 
         <TextView
             android:text="@string/rules6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/green6"
+            android:background="@color/green2"
             style="@style/rulesText"
             />
 
