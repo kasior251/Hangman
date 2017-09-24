@@ -190,6 +190,7 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
     //oppdaterer variabler og ordet samt bildet som vises på skjermen
     private void sjekkBokstav(String c) {
         if (!flereForsok() || ordGjettet()  ) {
+
             return;
         }
 
@@ -265,6 +266,9 @@ public class Game extends AppCompatActivity implements GameOverDialog.DialogClic
             case R.id.stop:
                 finish();
                 break;
+            case R.id.help:
+                Intent intent = new Intent(this, Rules.class);
+                startActivity(intent);
             default:
 // If we got here, the user's action was not recognized.
 // Invoke the superclass to handle it.

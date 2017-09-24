@@ -15,6 +15,15 @@
     <string name="statsTittel">Stats for this session</string>
     <string name="stop">Quit</string>
     <string name="back">Go back</string>
+    <string name="help">Help</string>
+
+    <string name="rulesHeader">Rules</string>
+    <string name="rules1">The objective of the hangman game is to guess the word</string>
+    <string name="rules2">The word has as many letters as there are dashes on the screen</string>
+    <string name="rules3">You guess one letter at a time</string>
+    <string name="rules4">If you choose the right letter all its ocurrences will show on the screen</string>
+    <string name="rules5">If you choose the wrong letter another part of hangman\'s body will be drawn</string>
+    <string name="rules6">You loose after choosing a wrong letter 7th time</string>
 
     <string name="a">A</string>
     <string name="b">B</string>

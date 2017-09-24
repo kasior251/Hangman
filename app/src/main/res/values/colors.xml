@@ -3,6 +3,17 @@
     <color name="colorPrimary">#e7c159</color>
     <color name="colorPrimaryDark">#5d370a</color>
     <color name="colorAccent">#618027</color>
+    <color name="green">#1b5e20</color>
     <color name="white">#FFFFFF</color>
     <color name="red">#FF0000</color>
+    <color name="green1">#e8f5e9</color>
+    <color name="green2">#c8e6c9</color>
+    <color name="green3">#a5d6a7</color>
+    <color name="green4">#81c784</color>
+    <color name="green5">#66bb6a</color>
+    <color name="green6">#4caf50</color>
+    <color name="green7">#43a047</color>
+    <color name="green8">#388e3c</color>
+    <color name="green9">#2e7d32</color>
+    <color name="green10">#1b5e20</color>
 </resources>

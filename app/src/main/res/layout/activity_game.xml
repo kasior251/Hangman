@@ -13,13 +13,14 @@
         android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:titleTextColor="@color/white">
+        app:titleTextColor="@color/green"
+        android:background="@color/green">
     </android.support.v7.widget.Toolbar>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="1"
         android:id="@+id/melding"
         android:textColor="@color/red"
         android:gravity="center"

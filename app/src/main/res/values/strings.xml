@@ -15,7 +15,15 @@
     <string name="statsTittel">Statistikk for denne økten</string>
     <string name="stop">Avslutt</string>
     <string name="back">Tilbake</string>
+    <string name="help">Hjelp</string>
 
+    <string name="rulesHeader">Regler</string>
+    <string name="rules1">Hangman er en gjettelek der du skal gjette et ord</string>
+    <string name="rules2">Ordet du skal gjette er like langt som antall streker på skjermen</string>
+    <string name="rules3">Du gjetter en og en bokstav</string>
+    <string name="rules4">Hvis du velger riktig bokstav blir bokstaven synlig alle steder den forekommer i ordet</string>
+    <string name="rules5">Hvis du velger feil bokstav kommer det en kroppsdel til på mannen</string>
+    <string name="rules6">Du taper hvis du velger feil bokstav 7 ganger</string>
 
     <string name="a">A</string>
     <string name="b">B</string>

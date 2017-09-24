@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.kasia.hangman.Game"
+    android:background="@color/white"
+    android:weightSum="10">
+
+    <TextView
+        android:text="@string/rulesHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:textColor="@color/green10"
+        android:textColorHighlight="@android:color/primary_text_dark"
+        android:layout_weight="3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="6"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="@string/rules1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green1"
+            style="@style/rulesText" />
+
+        <TextView
+            android:text="@string/rules2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green2"
+            style="@style/rulesText" />
+
+        <TextView
+            android:text="@string/rules3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green3"
+            style="@style/rulesText" />
+
+        <TextView
+            android:text="@string/rules4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green4"
+            style="@style/rulesText" />
+
+        <TextView
+            android:text="@string/rules5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green5"
+            style="@style/rulesText" />
+
+        <TextView
+            android:text="@string/rules6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green6"
+            style="@style/rulesText"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:onClick="stop"
+        android:text="@string/back"
+        android:background="@drawable/button"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>
+

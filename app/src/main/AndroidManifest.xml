@@ -25,6 +25,10 @@
             android:parentActivityName=".WelcomeScreen"
             android:configChanges="orientation|screenSize">
         </activity>
+        <activity android:name=".Rules"
+            android:parentActivityName=".WelcomeScreen"
+            android:configChanges="orientation|screenSize">
+        </activity>
     </application>
 
 </manifest>
